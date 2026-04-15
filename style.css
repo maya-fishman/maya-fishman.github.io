@@ -3,8 +3,18 @@
   --nav-text-active-bg: #535661;
   --nav-text-hover-bg: #8cad63;
   --nav-text-bg: #adc178;
-  --bg-color: #d9f2fe;
+  --bg-color: #000000;
   --link-color: #fcc85e;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: white;
 }
 
 * {
@@ -28,25 +38,23 @@ body {
 h1 {
   text-align: center;
   font-size: 64px;
-  color: #16106c;
+  color: #ffffff;
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 30px;
   margin-right: 30px;
-  font-family: "Rye", "Helvetica", "Arial", sans-serif;
-  font-weight: lighter;
-  
+  font-family: "Prata", "Helvetica", "Arial", sans-serif;
+  font-weight: bold;
 }
 
-h1.pagetitle{
+h1.pagetitle {
   font-size: 42px;
-  margin-bottom: 10px
+  margin-bottom: 10px;
 }
 
 #hideheading {
   display: none;
 }
-
 
 nav #navbar {
   max-width: 100%;
@@ -59,10 +67,6 @@ nav #navbar {
 nav {
   display: initial;
 }
-/*
-.active {
-  background-color: var(--nav-text-active-bg);
-}*/
 
 #navbar {
   list-style-type: none;
@@ -90,7 +94,7 @@ nav #navbar li a {
 }
 
 nav #navbar li a.active {
-  font-weight: bolder;
+  text-decoration: underline;
 }
 
 nav #navbar li img {
@@ -112,6 +116,20 @@ nav #navbar li button {
   float: left;
 }
 
+iframe {
+  height: 100vh;
+  border: none;
+  outline: none;
+  overflow-x: hidden;
+}
+
+.essay-iframe-container {
+  overflow: hidden;
+  overflow-x: hidden;
+  width: 100%;
+  display: flex;
+}
+
 @media screen and (max-width: 869px) {
   #navbar li:not(#buttonlist) {
     display: none;
@@ -129,12 +147,12 @@ nav #navbar li button {
     box-shadow: none;
   }
 
-  .essay-iframe-container{
-    flex-direction: column
+  .essay-iframe-container {
+    flex-direction: column;
   }
 
-  .essay-iframe-container iframe{
-    width: 100vw
+  .essay-iframe-container iframe {
+    width: 100vw;
   }
 }
 
@@ -150,12 +168,16 @@ nav #navbar li button {
   #clickedsidebar {
     display: none;
   }
-  .essay-iframe-container{
-    flex-direction: row
+  .essay-iframe-container {
+    flex-direction: row;
+    justify-content: space-around;
   }
 
-  .essay-iframe-container iframe{
-    width: 50vw
+  .essay-iframe-container iframe {
+    width: 47vw;
+    height: 100vw;
+    padding: 0;
+    margin: 0;
   }
 }
 
@@ -247,24 +269,9 @@ footer {
   margin: 10px 0 10px 5px;
 }
 
-
-iframe{
-  margin: auto;
-  height: 100vh;
-  border: none;
-  outline: none;
-  overflow-x: hidden;
-  margin-left: 0;
-}
-
-
-.essay-iframe-container{
-  overflow: hidden;
-  overflow-x: hidden;
-  width: 100%;
+/* CAROUSEL */
+.carousel-items {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-
-
-
