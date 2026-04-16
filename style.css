@@ -3,7 +3,7 @@
   --nav-text-active-bg: #535661;
   --nav-text-hover-bg: #8cad63;
   --nav-text-bg: #adc178;
-  --bg-color: #000000;
+  --bg-color: #aab6fb;
   --link-color: #fcc85e;
 }
 
@@ -14,7 +14,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: white;
+  color: #031b88;
 }
 
 * {
@@ -37,8 +37,6 @@ body {
 /*TEXT*/
 h1 {
   text-align: center;
-  font-size: 64px;
-  color: #ffffff;
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 30px;
@@ -48,7 +46,7 @@ h1 {
 }
 
 h1.pagetitle {
-  font-size: 42px;
+  font-size: clamp(2.8rem, 5vw, 8vw);
   margin-bottom: 10px;
 }
 
@@ -270,8 +268,45 @@ footer {
 }
 
 /* CAROUSEL */
+
+.carousel {
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  overflow: hidden; /* Hide images as they move off-screen */
+}
+
 .carousel-items {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
+  width: max-content;
+  background: linear-gradient(
+    90deg,
+    #0003c2 0%,
+    rgb(212, 195, 255) 47%,
+    rgba(108, 3, 255, 1) 100%
+  );
+  animation: animate 30s linear infinite;
+  overflow: hidden;
+  gap: 20px;
+}
+
+@keyframes animate {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.carousel-items:hover {
+  animation-play-state: paused;
+}
+
+.carousel-item img {
+  flex-shrink: 0;
+  width: 18vw;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
