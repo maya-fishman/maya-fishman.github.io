@@ -25,18 +25,21 @@ closebutton.addEventListener("click", function () {
 
 window.addEventListener("resize", function () {
   let width = window.innerWidth;
-  if (width > 560) {
-  } else if (width < 560) {
+  if (width > 869) {
+  } else if (width < 869) {
     clickedsidebar.id = "sidebar";
     button2.id = "button";
     heading1.id = "showheading";
+        closebutton.id = "closebutton";
+    closelist.id = "closelist";
+
   }
 });
-
+/* not needed?
 window.addEventListener("resize", function () {
   let width = window.innerWidth;
-  if (width < 560) {
+  if (width < 869) {
     closebutton.id = "closebutton";
     closelist.id = "closelist";
   }
-});
+});*/
