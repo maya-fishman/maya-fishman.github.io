@@ -52,6 +52,20 @@ p {
   text-align: center;
   margin-left: 8%;
   margin-right: 8%;
+  margin-top: 1%;
+}
+h2 {
+  font-size: 1.4rem;
+  text-align: center;
+  margin-left: 8%;
+  margin-right: 8%;
+  margin-bottom: 0px;
+  margin-top: 1%;
+  font-weight: 600;
+}
+
+abbr:hover {
+  cursor: help;
 }
 
 h1.pagetitle {
@@ -174,6 +188,7 @@ iframe {
 
   .id {
     font-size: 0.8rem;
+    transform: translateY(8px);
   }
 }
 
@@ -217,9 +232,13 @@ iframe {
   }
 
   .id {
-    transition: 0.2s;
-    transform: translateY(1em);
+    transform: translateY(8px);
+  }
+
+  .carousel-item:hover .id {
+    transform: translateY(8px);
     font-size: 1.35rem;
+    transition: 0.2s;
   }
 }
 
@@ -287,6 +306,8 @@ nav #clickedsidebar {
   position: relative;
   bottom: 0px;
   overflow: hidden; /* Hide images as they move off-screen */
+  margin-bottom: 0px;
+  bottom: -10px;
 }
 
 .carousel-items {
@@ -336,10 +357,6 @@ nav #clickedsidebar {
   display: flex;
 }
 
-.carousel-item:hover .id {
-  transform: translateY(0);
-}
-
 .carousel-item {
   padding: 8px;
 }
@@ -372,13 +389,26 @@ nav #clickedsidebar {
 }
 
 .novel-and-citations {
-  bottom: 0px;
   position: fixed;
   display: flex;
   justify-content: space-around;
   align-content: center;
-  margin-left: clamp(30px, 25%, 300px);
-  margin-right: clamp(30px, 25%, 300px);
+  margin-left: clamp(10px, 25%, 700px);
+  margin-right: clamp(10px, 25%, 700px);
   width: 50%;
-  font-weight: bold;
+  bottom: 8px;
+  text-wrap: nowrap;
+  font-weight: 600;
+}
+
+.novel-and-citations__text__novel {
+  text-align: left;
+}
+
+.novel-and-citations__text__citations {
+  text-align: right;
+}
+
+.numerals {
+  font-family: "Noto Sans Cham", "Helvetica", "Arial", serif;
 }
