@@ -156,6 +156,10 @@ iframe {
   display: flex;
 }
 
+.essay-iframe {
+  position: relative;
+}
+
 @media screen and (max-width: 869px) {
   #navbar li:not(#buttonlist) {
     display: none;
@@ -189,6 +193,26 @@ iframe {
   .id {
     font-size: 0.8rem;
     transform: translateY(8px);
+  }
+
+  abbr {
+    text-decoration: none;
+  }
+
+  .renaissance-container {
+    grid-template-areas:
+      "timeline"
+      "social-media"
+      "paragraph";
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    padding: 8px 8px
+  }
+
+  .timeline img{
+    max-width: 100%;
   }
 }
 
@@ -239,6 +263,45 @@ iframe {
     transform: translateY(8px);
     font-size: 1.35rem;
     transition: 0.2s;
+  }
+
+  .navbar {
+    position: sticky;
+    z-index: 100000;
+  }
+
+  .essay-iframe-expand {
+    position: absolute;
+    right: 10%;
+    top: 3%;
+  }
+
+  .renaissance-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-areas:
+      "timeline timeline"
+      "social-media paragraph";
+    margin-right: auto;
+    margin-left: auto;
+    width: 90%;
+    grid-template-rows: 1fr 1fr;
+    gap: 2% 2%;
+    grid-auto-flow: row;
+  }
+
+  .timeline {
+    display: flex;
+    justify-content: center;
+    grid-area: timeline;
+  }
+
+  .social-media {
+    grid-area: social-media;
+  }
+
+  .paragraph {
+    grid-area: paragraph;
   }
 }
 
@@ -366,10 +429,6 @@ nav #clickedsidebar {
   text-align: center;
 }
 
-.independence-movements__id {
-  color: rgb(61, 0, 91);
-}
-
 .carousel-item-text {
   position: absolute;
   top: 0;
@@ -383,7 +442,7 @@ nav #clickedsidebar {
   align-items: center;
   justify-content: center;
   width: 85%;
-  height: 80%;
+  height: 77%;
   align-self: center;
   justify-self: center;
 }
@@ -412,3 +471,15 @@ nav #clickedsidebar {
 .numerals {
   font-family: "Noto Sans Cham", "Helvetica", "Arial", serif;
 }
+
+.paragraph {
+  background-color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  text-justify: center;
+  padding: 10px;
+}
+
