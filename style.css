@@ -296,6 +296,7 @@ iframe {
     grid-area: timeline;
   }
 
+
   .social-media {
     grid-area: social-media;
   }
@@ -473,13 +474,11 @@ nav #clickedsidebar {
 }
 
 .paragraph {
-  background-color: white;
-  text-align: center;
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  align-content: center;
-  text-justify: center;
-  padding: 10px;
-}
+  justify-content: center;
+  align-items: center;
+  background-color: white;
 
+  margin-bottom: 8px;
+}
