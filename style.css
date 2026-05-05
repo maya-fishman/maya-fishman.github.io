@@ -482,3 +482,15 @@ nav #clickedsidebar {
 
   margin-bottom: 8px;
 }
+
+
+  
+.map-iframe-container {
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+  height: calc(100vh - 48px);
+  display: flex;
+  align-content:center;
+  justify-content: center;
+}
