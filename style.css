@@ -208,11 +208,23 @@ iframe {
     margin-left: auto;
     margin-right: auto;
     box-sizing: border-box;
-    padding: 8px 8px
+    padding: 8px 8px;
   }
 
-  .timeline img{
+  .timeline img {
     max-width: 100%;
+  }
+
+  .infographic-iframe-container{
+    width: 100%;
+    padding: 0;
+  
+  }
+
+  .infographic-iframe{
+    padding: 0;
+    margin: 0;
+    width: 100%
   }
 }
 
@@ -296,13 +308,19 @@ iframe {
     grid-area: timeline;
   }
 
-
   .social-media {
     grid-area: social-media;
   }
 
   .paragraph {
     grid-area: paragraph;
+  }
+
+  .infographic-iframe-container {
+    width: 50%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -483,14 +501,12 @@ nav #clickedsidebar {
   margin-bottom: 8px;
 }
 
-
-  
 .map-iframe-container {
   overflow-y: auto;
   overflow-x: hidden;
   width: 100%;
   height: calc(100vh - 48px);
   display: flex;
-  align-content:center;
+  align-content: center;
   justify-content: center;
 }
